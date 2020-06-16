@@ -1,0 +1,23 @@
+author: hobbe <https://github.com/hobbe>
+description: A Mongoose OS library to use Arduino NTC thermistor.
+version: 1.0
+
+type: lib
+platform: esp8266
+
+sources:
+  - src
+includes:
+  - include
+libs:
+  - origin: https://github.com/mongoose-os-libs/adc
+  - origin: https://github.com/mongoose-os-libs/arduino-compat
+
+tags:
+  - adc
+  - arduino
+  - c
+  - ntc
+  - thermistor
+
+manifest_version: 2020-01-29
