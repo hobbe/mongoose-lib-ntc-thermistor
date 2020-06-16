@@ -1,4 +1,4 @@
-# mongoose-lib-ntp
+# mongoose-lib-ntc-thermistor
 
 ## Description
 
