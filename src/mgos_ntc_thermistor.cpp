@@ -14,41 +14,41 @@
 
 #include "mgos_ntc_thermistor.h"
 
-NTC_Thermistor *mgos_ntc_create() {
+NTC_Thermistor *mgos_ntc_thermistor_create() {
   return new NTC_Thermistor();
 }
 
-void mgos_ntc_close(NTC_Thermistor *sensor) {
+void mgos_ntc_thermistor_close(NTC_Thermistor *sensor) {
   if (sensor != nullptr) {
     delete sensor;
     sensor = nullptr;
   }
 }
 
-bool mgos_ntc_begin(NTC_Thermistor *sensor,
-                    unsigned char pin,
-                    double referenceResistance,
-                    double nominalResistance,
-                    double nominalTemperatureCelsius,
-                    double bValue,
-                    int adcResolution) {
+bool mgos_ntc_thermistor_begin(NTC_Thermistor *sensor,
+                               unsigned char pin,
+                               double referenceResistance,
+                               double nominalResistance,
+                               double nominalTemperatureCelsius,
+                               double bValue,
+                               int adcResolution) {
   if (sensor == nullptr) return false;
 
   sensor->initialize(pin, referenceResistance, nominalResistance, nominalTemperatureCelsius, bValue, adcResolution);
   return true;
 }
 
-double mgos_ntc_readCelsius(NTC_Thermistor *sensor) {
+double mgos_ntc_thermistor_read_celsius(NTC_Thermistor *sensor) {
   if (sensor == nullptr) return 0;
   return sensor->readCelsius();
 }
 
-double mgos_ntc_readFahrenheit(NTC_Thermistor *sensor) {
+double mgos_ntc_thermistor_read_fahrenheit(NTC_Thermistor *sensor) {
   if (sensor == nullptr) return 0;
   return sensor->readFahrenheit();
 }
 
-double mgos_ntc_readKelvin(NTC_Thermistor *sensor) {
+double mgos_ntc_thermistor_read_kelvin(NTC_Thermistor *sensor) {
   if (sensor == nullptr) return 0;
   return sensor->readKelvin();
 }

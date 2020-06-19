@@ -24,35 +24,35 @@
 extern "C" {
 #endif /* __cplusplus */
 
-NTC_Thermistor *mgos_ntc_create();
+NTC_Thermistor *mgos_ntc_thermistor_create();
 
-bool mgos_ntc_begin(NTC_Thermistor *sensor,
-                    unsigned char pin,
-                    double referenceResistance,
-                    double nominalResistance,
-                    double nominalTemperatureCelsius,
-                    double bValue,
-                    int adcResolution);
+bool mgos_ntc_thermistor_begin(NTC_Thermistor *sensor,
+                               unsigned char pin,
+                               double referenceResistance,
+                               double nominalResistance,
+                               double nominalTemperatureCelsius,
+                               double bValue,
+                               int adcResolution);
 
-void mgos_ntc_close(NTC_Thermistor *sensor);
+void mgos_ntc_thermistor_close(NTC_Thermistor *sensor);
 
 /**
  * Reads a temperature in Celsius from the thermistor.
  * @return temperature in degree Celsius
  */
-double mgos_ntc_readCelsius(NTC_Thermistor *sensor);
+double mgos_ntc_thermistor_read_celsius(NTC_Thermistor *sensor);
 
 /**
  * Reads a temperature in Fahrenheit from the thermistor.
  * @return temperature in degree Fahrenheit
  */
-double mgos_ntc_readFahrenheit(NTC_Thermistor *sensor);
+double mgos_ntc_thermistor_read_fahrenheit(NTC_Thermistor *sensor);
 
 /**
  * Reads a temperature in Kelvin from the thermistor.
  * @return temperature in degree Kelvin
  */
-double mgos_ntc_readKelvin(NTC_Thermistor *sensor);
+double mgos_ntc_thermistor_read_kelvin(NTC_Thermistor *sensor);
 
 #ifdef __cplusplus
 }
