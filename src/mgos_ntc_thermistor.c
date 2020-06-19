@@ -14,6 +14,6 @@
 
 #include <stdbool.h>
 
-bool mgos_ntc_init(void) {
+bool mgos_ntc_thermistor_init(void) {
   return true;
 }
