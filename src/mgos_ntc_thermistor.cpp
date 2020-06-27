@@ -26,12 +26,12 @@ void mgos_ntc_thermistor_close(NTC_Thermistor *sensor) {
 }
 
 bool mgos_ntc_thermistor_begin(NTC_Thermistor *sensor,
-                               unsigned char pin,
-                               double referenceResistance,
-                               double nominalResistance,
-                               double nominalTemperatureCelsius,
-                               double bValue,
-                               int adcResolution) {
+                               const unsigned char pin,
+                               const double referenceResistance,
+                               const double nominalResistance,
+                               const double nominalTemperatureCelsius,
+                               const double bValue,
+                               const int adcResolution) {
   if (sensor == nullptr) return false;
 
   sensor->initialize(pin, referenceResistance, nominalResistance, nominalTemperatureCelsius, bValue, adcResolution);
