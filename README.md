@@ -35,9 +35,9 @@ enum mgos_app_init_result mgos_app_init(void) {
     const unsigned char pin = 0;
     const double referenceResistance = 10000;
     const double nominalResistance = 32000;
-    const double nominalTemperatureCelsius = 20;
+    const double nominalTemperatureCelsius = 25;
     const double bValue = 3350;
-    const int adcResolution = 1023;
+    const int adcResolution = 1024;
     mgos_ntc_thermistor_begin(ntc, pin, referenceResistance, nominalResistance,
                               nominalTemperatureCelsius, bValue, adcResolution);
     LOG(LL_INFO, ("NTC Thermistor initialized"));
